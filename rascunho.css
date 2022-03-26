@@ -1,5 +1,6 @@
 body{
     background-image: linear-gradient(rgb(255, 208, 0), black);
+    font-size: 150%
 }
 
 h1{
@@ -15,4 +16,13 @@ h1{
 
 .resultado{
     text-align: center;
+}
+
+input,select{
+    border-radius: 5px;
+    font-size: 70%;
+}
+
+select{
+    border-radius: 2px;
 }

@@ -14,10 +14,10 @@ var cifroes = {
 function converter(){
     var de = document.getElementById("de").value
     var para = document.getElementById("para").value
-    var valorInicial = document.getElementById("number").value
-    var resultado = document.getElementById("resultado")
+    var valorInicial = document.getElementById("from").value
+    var resultado = document.getElementById("for")
     if (de == "" | para =="" | valorInicial == ""){
-        alert("Favor preencher todos os campos, eu não sou bola de cristal caraio")
+        None
     }
     else if (de+para in cotações){
         valor = cotações[de+para]
@@ -31,7 +31,7 @@ function converter(){
         valorFinal=valorInicial
     }
     retorno = valorFinal.toFixed(2)
-    resultado.innerHTML="O valor convertido de "+de+" para "+para+" é de "+cifroes[para]+retorno
+    resultado.value=retorno
 }
 
 const url = `https://economia.awesomeapi.com.br/json/last/USD-BRL,BRL-EUR,USD-EUR`
