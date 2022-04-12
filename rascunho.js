@@ -1,8 +1,4 @@
-var cotações = {
-USDBRL:0,
-BRLEUR:0,
-USDEUR:0,
-}
+var cotações = {}
 
 var cifroes = {
     BRL:"R$",
@@ -10,6 +6,11 @@ var cifroes = {
     EUR:"€",
     bitcoin:"B"
 }
+
+var acesso = {
+    USDBRL:'USD-BRL',
+    BRLEUR:'BRL-EUR',
+    USDEUR:'USD-EUR'}
 
 function converter(){
     var de = document.getElementById("de").value
@@ -34,12 +35,15 @@ function converter(){
     resultado.value=retorno
 }
 
-const url = `https://economia.awesomeapi.com.br/json/last/USD-BRL,BRL-EUR,USD-EUR`
-async function fetchapi(){
-    const itens = await fetch(url)
-    const moedas = await itens.json()
-    cotações.USDBRL = moedas.USDBRL.bid
-    cotações.BRLEUR = moedas.BRLEUR.bid
-    cotações.USDEUR = moedas.USDEUR.bid   
+for (cotacao in acesso){
+    async function fetchapi(url,cotacao){
+        const itens = await fetch(url)
+        const moedas = await itens.json()
+        var tabela = cotacao.substring(0,3)
+        console.log(cotacao)
+        console.log(tabela)
+        console.log(moedas[tabela])
+        cotações[cotacao] = moedas[tabela].bid
+    }
+    fetchapi(`https://economia.awesomeapi.com.br/json/last/`+acesso[cotacao],cotacao)
 }
-fetchapi()
