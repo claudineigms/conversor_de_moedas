@@ -30,6 +30,7 @@ function converter(){
     var para = document.getElementById("para").value
     var valorInicial = document.getElementById("from").value
     var resultado = document.getElementById("for")
+    var valorFinal
     if (de == "" | para =="" | valorInicial == ""){
         None
     }
@@ -54,7 +55,6 @@ function converter(){
     else{
         retorno = valorFinal.toFixed(2)
     }
-
     resultado.value=retorno
 }
 
