@@ -8,31 +8,35 @@
 <h1>
 Conversor de Moeda
 </h1>
-<div class = "conversor">
-    <div class="campode_de">
-        <input type="number" id="from" placeholder="Digite o Valor" onkeyup="converter()">
-        <select name="" id="de">
-            <option value="BRL">Real</option>
-            <option value="USD">Dolar Americano</option>
-            <option value="EUR">Euro</option>
-            <option value="BTC">Bitcoin</option>
-            <option value="CAD">Dólar Canadense</option>
-            <option value="ARS">Peso Argentino</option>
-            <option value="JPY">Iene Japonês</option>
-
-        </select>
-    <div cladd="campo_para">
-        <input type="number" id="for" placeholder="Digite o Valor" onkeyup="converter()">
-        <select name="" id="para">
-            <option value="USD">Dolar Americano</option>
-            <option value="BRL">Real</option>
-            <option value="EUR">Euro</option>
-            <option value="BTC">Bitcoin</option>
-            <option value="CAD">Dólar Canadense</option>
-            <option value="ARS">Peso Argentino</option>
-            <option value="JPY">Iene Japonês</option>
-
-        </select>
+<div class="main">
+    <div class = "conversor">
+        <div class="campode_de">
+            <input type="number" id="from" placeholder="Digite o Valor" onkeyup="converter()">
+            <select name="" id="de">
+                <option value="BRL">Real</option>
+                <option value="USD">Dolar Americano</option>
+                <option value="EUR">Euro</option>
+                <option value="BTC">Bitcoin</option>
+                <option value="CAD">Dólar Canadense</option>
+                <option value="ARS">Peso Argentino</option>
+                <option value="JPY">Iene Japonês</option>
+            </select>
+        </div>
+        <div class="campo_para">
+            <input type="number" id="for" placeholder="Digite o Valor" onkeyup="converter()">
+            <select name="" id="para">
+                <option value="USD">Dolar Americano</option>
+                <option value="BRL">Real</option>
+                <option value="EUR">Euro</option>
+                <option value="BTC">Bitcoin</option>
+                <option value="CAD">Dólar Canadense</option>
+                <option value="ARS">Peso Argentino</option>
+                <option value="JPY">Iene Japonês</option>
+            </select>
+        </div>
+    </div>
+    <div class = "Troca">
+        <button onclick="trocarMoedas()"> trocar </button>
     </div>
 </div>
 </body>

@@ -76,3 +76,12 @@ for (cotacao in acesso){
     }
     fetchapi(`https://economia.awesomeapi.com.br/json/last/`+acesso[cotacao],cotacao)
 }
+
+function trocarMoedas(){
+    const de = document.getElementById("de")
+    const para = document.getElementById("para")
+    const de2 = de.value
+    de.value = para.value
+    para.value = de2
+    converter()
+}
