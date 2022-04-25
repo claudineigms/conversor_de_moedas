@@ -63,15 +63,15 @@ for (cotacao in acesso){
         const itens = await fetch(url)
         const moedas = await itens.json()
         var tabela = cotacao.substring(0,3)
-        console.log(cotacao)
+        console.log (moedas)
+        console.log(url)
         console.log(tabela)
-        console.log(moedas[tabela])
         if (cotacao == "BTCBRL"){
             var valor = moedas[tabela].bid
             cotações[cotacao] = valor.replaceAll(".", "")
         }
         else{
-            cotações[cotacao] = moedas[tabela].bid
+            cotações[cotacao] = moedas[cotacao].bid
         }
     }
     fetchapi(`https://economia.awesomeapi.com.br/json/last/`+acesso[cotacao],cotacao)
