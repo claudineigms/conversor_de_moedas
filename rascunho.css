@@ -25,9 +25,26 @@ body{
     100%{background-position:7% 0%}
 }
 
-h1{
+.topo{
+    display: flex;
+    flex-direction: column;   
+}
+
+.topo h1{
+    margin-top: -10px;
+    align-items: center;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.topo .botao{
+    text-align: end;
+}
+
+.topo button{
+    border-radius: 15px;
+    background-color: black;
+    color: white;
 }
 
 .main{
